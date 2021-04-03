@@ -1,17 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+// import components
+import Header from "./components/Header";
+import MainTop from "./components/MainTop";
+import AboutMe from "./components/AboutMe";
+import MyWorks from "./components/MyWorks";
+import Contact from "./components/Contact";
+// import stylesheet
+import "./stylesheet/css/reset.css";
+import "./stylesheet/css/index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App: React.FC = () => {
+  return (
+    <div>
+      <Header />
+      <main>
+        <section>
+          <MainTop />
+          <AboutMe />
+          <MyWorks />
+          <Contact />
+        </section>
+      </main>
+      <footer>
+        <p>&copy; Keisuke Tanaka 2021</p>
+      </footer>
+    </div>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const render = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById("root")
+  );
+};
+
+window.onload = render;
