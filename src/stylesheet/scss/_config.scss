@@ -10,7 +10,7 @@ $black: #242222;
   min-width: 150px;
 }
 %font-size-large {
-  font-size: clamp(20px, calc(5.5vw + 1rem), 26px);
+  font-size: clamp(20px, calc(5.5vw + 1rem), 33px);
 }
 @mixin container {
   width: clamp(30px, 80%, 480px);
@@ -48,14 +48,23 @@ $black: #242222;
   left: -3px;
 }
 @mixin section-pc {
-  margin: 2.8rem auto 0 auto;
+  margin: 6rem auto;
   width: calc(100vw - 8.4rem);
 }
 @mixin section-pc-large {
   width: 1050px;
-  margin: 5rem auto;
+  margin: 7.5rem auto;
 }
 @mixin responsive-img($scale, $positionX, $positionY) {
   transform: scale($scale);
   object-position: $positionX $positionY;
+}
+@mixin tech-list-item {
+  list-style: none;
+  border-radius: 3px;
+  width: fit-content;
+  padding: 0.1rem 0.45rem;
+  margin: 0 0.4rem 0.4rem 0.4rem;
+  background-color: #f3f5ef;
+  font-size: 0.8rem;
 }

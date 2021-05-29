@@ -17,49 +17,61 @@ const AboutMe: React.FC = () => {
       <div className="about-me-container">
         <h2>ABOUT ME</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-          molestie, eros ut rutrum pulvinar, nunc risus finibus nisi, vitae
-          vehicula elit nulla sit amet lorem. Vestibulum efficitur justo ut
-          pharetra iaculis. Praesent tristique non nisi at vulputate. Proin sit
-          amet dolor feugiat, porttitor velit non, semper ipsum. vehicula elit
-          nulla sit amet lorem. Vestibulum efficitur justo ut pharetra iaculis.
-          Praesent tristique non nisi at vulputate. Proin sit amet dolor
-          feugiat, porttitor velit non, semper ipsum.
+          My name is Keisuke. I am a passionate IT enthusiast, barista,
+          nature-lover and a father based in Berlin.
+        </p>
+        <p>
+          As a self-taught web developer, I am always very happy to work on
+          challenging projects where my programming skills and sense of web
+          design can be used to the fullest extent.
         </p>
         {!IsActive && (
           <div className="read-more">
             <div className="read-more-border"></div>
             <button className="read-more-button" onClick={readMoreBtnHandler}>
-              interested more?
+              Interested More?
             </button>
           </div>
         )}
         {IsActive && (
           <div className="about-me-full-text">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              molestie, eros ut rutrum pulvinar, nunc risus finibus nisi, vitae
-              vehicula elit nulla sit amet lorem. Vestibulum efficitur justo ut
-              pharetra iaculis. Praesent tristique non nisi at vulputate. Proin
-              sit amet dolor feugiat, porttitor velit non, semper ipsum.
-              Curabitur vel ex sit amet eros rutrum hendrerit eget ut velit. Nam
-              quis risus nisi. Integer eu ante ac tellus fringilla elementum vel
-              sed nunc. Nunc suscipit lorem ac risus aliquet, eu malesuada arcu
-              ullamcorper. Ut condimentum arcu neque, ut congue orci ullamcorper
-              id. Donec at velit nulla. Vestibulum ante ipsum primis in faucibus
-              orci luctus et ultrices posuere cubilia curae; Vestibulum
-              ultricies lacinia orci, in viverra tellus vehicula at. In urna
-              tellus, scelerisque vitae urna eu, vulputate vestibulum lacus. Ut
-              purus erat, euismod vel erat et, finibus ullamcorper ex. Integer
-              euismod ante nec leo aliquam tempus. Ut varius velit in venenatis
-              interdum. Curabitur finibus a odio vel elementum. Duis dignissim,
-              elit ut pellentesque luctus, orci urna sodales orci, at rutrum
-              libero mi sed arcu. Integer sit amet velit quis turpis consequat
-              pharetra vitae at sapien. Sed posuere at dui dignissim aliquam. In
-              condimentum fermentum maximus. Quisque luctus lectus nec tellus
-              fringilla, sed feugiat erat semper. Maecenas libero mi, feugiat ac
-              dapibus nec, mattis et odio. Aliquam felis enim, porta dignissim
-              purus quis, ultrices dapibus risus.
+              I started my job career as barista in 2016. Since then, I spread
+              my passion for speciality coffee all the time. Once I had the
+              opportunity to create a website for the café where I was working,
+              I started to learn how to code.
+            </p>
+            <p>
+              After one hour of learning, I realized that programming lit a fire
+              in me.
+            </p>
+            <p>Immediately, I researched how to become a programmer.</p>
+            <p>
+              Now after deep learning about programming through self-study, I
+              enjoy creating modern, fast, user-friendly, cross-browser
+              compatible and easily maintainable website using following
+              technology:
+            </p>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS / SCSS</li>
+              <li>JavaScript / TypeScript</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>Node.js</li>
+            </ul>
+            <p>
+              I don't learn programming because I have to learn, I learn because
+              I want to. It may sound childish, but it's the truth. That's so
+              much fun for me to deepen my knowledge or to acquire new stuffs.
+              After this process you achieve what you really want to develop and
+              that is my happiest moment ever. In that sense, I can't stop
+              learning.
+            </p>
+            <p>
+              As you can imagine, I am very curious when it comes to
+              programming. Let's talk about technology anytime, and I'd be very
+              happy to work with you!
             </p>
             <div className="read-less">
               <div className="read-less-border"></div>
@@ -68,7 +80,7 @@ const AboutMe: React.FC = () => {
                   className="read-less-button"
                   onClick={readLessBtnHandler}
                 >
-                  show less
+                  Show Less
                 </button>
               </a>
             </div>

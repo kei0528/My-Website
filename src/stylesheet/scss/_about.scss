@@ -10,6 +10,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    h2 {
+      margin-bottom: 2.2rem;
+    }
+    p {
+      margin-bottom: 0.5rem;
+      align-self: flex-start;
+      font-weight: 300;
+      line-height: 1.6;
+      letter-spacing: 0.01rem;
+    }
+    ul {
+      padding: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      li {
+        @include tech-list-item;
+        margin: 0.5rem 0.5rem;
+        cursor: default;
+      }
+    }
   }
   // button
   button {
@@ -28,8 +49,10 @@
       @include button;
       width: 153px;
     }
-    &-button:hover {
-      box-shadow: #fee483 -4px -4px 0 -1px;
+    &:hover {
+      .read-more-border {
+        background-color: #fee483;
+      }
     }
     &-button:active {
       @include button-active;
@@ -39,6 +62,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1rem;
     .read-less {
       @include button-container(107px, 32px);
       &-border {
@@ -48,8 +72,10 @@
         width: 107px;
         @include button;
       }
-      &-button:hover {
-        box-shadow: #fee483 -4px -3.2px 0 -0.6px;
+      &:hover {
+        .read-less-border {
+          background-color: #fee483;
+        }
       }
       &-button:active {
         @include button-active;
@@ -91,17 +117,14 @@
     justify-content: space-between;
     flex-direction: row-reverse;
     &-container {
-      margin: 0;
-      p {
-        padding: 0 0 0 1.8rem;
-      }
+      margin: 0 0 0 4rem;
       flex: 2;
     }
     &-img-background {
       height: clamp(350px, 100%, 420px);
       flex: 1.3;
       img {
-        height: clamp(345px, 40vw, 420px);
+        height: 480px;
         display: block;
         object-position: 50% 50%;
       }
@@ -109,6 +132,12 @@
     .do-fixed {
       align-self: center;
     }
+  }
+}
+
+@media (min-width: 1025px) {
+  .about-me-img-background img {
+    height: 500px;
   }
 }
 

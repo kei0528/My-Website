@@ -1,4 +1,5 @@
 import React from "react";
+import codeLogo from "../images/coding.png";
 
 interface Prop {
   className: string;
@@ -8,6 +9,7 @@ interface Prop {
   title: string;
   description: string;
   usedTech: string[];
+  gitHub: string | null;
 }
 
 const Description: React.FC<Prop> = ({
@@ -18,6 +20,7 @@ const Description: React.FC<Prop> = ({
   title,
   description,
   usedTech,
+  gitHub,
 }) => {
   const UsedTech = () => {
     return usedTech.map((tech) => {
@@ -26,14 +29,34 @@ const Description: React.FC<Prop> = ({
   };
   return (
     <section className={"my-works-window" + " " + className}>
-      <a href={link}>
-        <div className="my-works-window-img-container">
-          <img src={src} alt={alt} />
-        </div>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <ul>{UsedTech()}</ul>
-      </a>
+      <div className="my-works-window-img-container">
+        <img src={src} alt={alt} />
+      </div>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <ul>{UsedTech()}</ul>
+      <div className="mw-button-container">
+        <a
+          href={link}
+          className="mw-go-to-page"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {/* Got Interested? */}
+        </a>
+        {gitHub ? (
+          <a
+            href={gitHub}
+            className="mw-read-code"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={codeLogo} alt="read more" />
+          </a>
+        ) : (
+          ""
+        )}
+      </div>
     </section>
   );
 };

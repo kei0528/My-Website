@@ -27,10 +27,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
   background-color: #fde382;
   &-container {
     @include container;
+
     padding: 0;
     &-greeting {
       display: flex;
@@ -94,16 +95,22 @@
           @include button-border(120px, 30px);
           background-color: white;
         }
+        &:hover {
+          .submit-button-border {
+            background-color: #ddfdce;
+          }
+        }
         input {
           @include button;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           border: solid $black 1px;
           border-radius: 3px;
           width: 120px;
           background-color: white;
           outline: none;
-        }
-        input:hover {
-          box-shadow: #fee483 -4px -4px 0px -1.5px;
+          cursor: pointer;
         }
         input:active {
           @include button-active;
@@ -213,6 +220,7 @@
   .contact {
     &-container {
       @include section-pc;
+      margin: 4rem auto;
       display: grid;
       grid-template-areas:
         "greeting form"
@@ -297,7 +305,8 @@
 
 @media (min-width: 1200px) {
   .contact-container {
-    @include section-pc-large;
+    width: 1050px;
+    margin: 5.5rem auto;
   }
   .submitted {
     width: 700px;

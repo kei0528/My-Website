@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
         <div className="contact-container-greeting">
           <h2>Contact</h2>
           {!formSubmitted && (
-            <p>I am always happy to hear you. Feel free to contact me! </p>
+            <p>I am always happy to hear from you. Feel free to contact me! </p>
           )}
         </div>
         {!formSubmitted && (
